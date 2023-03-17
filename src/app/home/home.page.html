@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+        APP Saudação
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form #formulario="ngForm">
+    <ion-item>
+      <ion-label>Digite seu Nome:</ion-label>
+      <ion-input name="nome" ngModel></ion-input>
+    </ion-item>
+      <ion-button expand="block" (click)="recebe(formulario)">ENVIAR</ion-button>   
+    <ion-item>
+      Bem vindo Sr./Sra.: &nbsp; <ion-input value="{{usuario}}" value="disabled"></ion-input>
+    </ion-item>
+  </form>
+  <ion-card>
+    Bem vindo Sr./Sra. {{usuario}}
+  </ion-card>
+</ion-content>
